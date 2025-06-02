@@ -16,17 +16,21 @@ A powerful way to send personalized messages at scale and build effective custom
 <a name="dependencies"></a>
 ## Dependencies
 
-- [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.13.0 or later
-- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3 or later
-- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.8.0 or later
+- [RestSharp](https://www.nuget.org/packages/RestSharp) - 112.1.0 or later
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 13.0.3 or later
+- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 2.0.1 or later
+- [Polly](https://www.nuget.org/packages/Polly) - 8.5.2 or later
 - [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 5.0.0 or later
+- [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) - 8.0.5 or later
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package RestSharp
 Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
+Install-Package Polly
 Install-Package System.ComponentModel.Annotations
+Install-Package System.Text.Json
 ```
 
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742).
