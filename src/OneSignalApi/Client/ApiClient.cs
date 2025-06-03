@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RestSharp;
 using Polly;
+using RestSharp.Serializers.NewtonsoftJson;
 
 namespace OneSignalApi.Client
 {
@@ -42,7 +43,7 @@ namespace OneSignalApi.Client
                 UserAgent = configuration.UserAgent,
                 ClientCertificates = configuration.ClientCertificates
             };
-            _restClient = new RestClient(restClientOptions);
+            _restClient = new RestClient(restClientOptions, configureSerialization: s => s.UseNewtonsoftJson());
             return _restClient;
         }
 
